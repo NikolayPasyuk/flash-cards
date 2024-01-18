@@ -28,3 +28,12 @@
     opacity: 0.5 !important;
   }
 }
+
+.itemIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 1.6rem;
+  height: 1.6rem;
+}
