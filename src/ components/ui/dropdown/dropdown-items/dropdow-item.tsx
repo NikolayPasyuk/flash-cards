@@ -7,7 +7,7 @@ import {
 
 import * as DropdownPrimitive from "@radix-ui/react-dropdown-menu";
 
-import s from "./dropdown-new-item.module.scss";
+import s from "./dropdown-item.module.scss";
 import { Typography } from "../../typography";
 
 export type DropdownItemProps = {
