@@ -10,20 +10,8 @@ import { Typography } from "../../ui/typography";
 import s from "./login-form.module.scss";
 
 const schema = z.object({
-  email: z
-    .string()
-    .trim()
-    .email("Invalid email address")
-    .refine((value) => value.trim() !== "", {
-      message: "Enter email",
-    }),
-  password: z
-    .string()
-    .trim()
-    .refine((value) => value.trim() !== "", { message: "Enter password" })
-    .refine((value) => value.length >= 8, {
-      message: "Password must be at least 8 characters",
-    }),
+  email: z.string().trim().email("Invalid email address"),
+  password: z.string().trim().min(8, "Password must be at least 8 characters"),
   rememberMe: z.boolean(),
 });
 
