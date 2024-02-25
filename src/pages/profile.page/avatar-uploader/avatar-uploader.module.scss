@@ -1,0 +1,17 @@
+.root {
+  position: relative;
+
+  .uploader {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    text-align: right;
+  }
+
+  .editIcon {
+    width: 28px;
+    height: 28px;
+    background-color: var(--color-dark-300);
+    border-radius: 0.4rem;
+  }
+}
