@@ -1,0 +1,18 @@
+@import "../../../styles/mixins";
+
+.card {
+  @include flex($direction: column, $align: center, $justify: center);
+
+  width: 100%;
+  max-width: 26.25rem;
+  margin-top: var(--line-height-m);
+  padding: 3.3rem 3.6rem 4.1rem;
+
+  .title {
+    margin-bottom: 2.7rem;
+  }
+
+  .avatarUploader {
+    margin-bottom: 0.6rem;
+  }
+}
