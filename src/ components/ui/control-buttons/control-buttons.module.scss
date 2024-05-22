@@ -1,0 +1,30 @@
+.controlButtonContainer {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: end;
+}
+
+.controlButton {
+  cursor: pointer;
+
+  display: flex;
+
+  background: none;
+  border: none;
+  box-shadow: none;
+
+  &:hover {
+    transform: scale(1.3);
+    transition: all 200ms;
+  }
+
+  &:active {
+    transform: scale(1);
+    transition: all 100ms;
+  }
+}
+
+.emptyBox {
+  width: 42px;
+}
