@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 
-import { ArrowDown } from "src/assets/icons/arrow-down/arrow-down.tsx";
+import { ArrowDown } from "./arrow-down.tsx";
 
 const meta = {
   title: "Icons/Arrow Down",
