@@ -1,1 +1,1 @@
-export * from "src/assets/icons/arrow-down/arrow-down.tsx";
+export * from "./arrow-down.tsx";
