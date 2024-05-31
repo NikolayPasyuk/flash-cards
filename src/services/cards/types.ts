@@ -16,3 +16,5 @@ export type Card = CreateCardDto & {
   shots: number;
   grade: number;
 };
+
+export type DeleteCardArgs = { cardId: Card["id"] } & Pick<Card, "deckId">;
