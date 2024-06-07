@@ -1,0 +1,21 @@
+.titleAndButton {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 33px;
+}
+
+.titleContainer {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.cover {
+  width: 170px;
+  height: 107px;
+  margin-top: 15px;
+}
+
+.textField {
+  margin-top: 25px;
+}
