@@ -17,6 +17,13 @@ export type Deck = {
   cardsCount: number;
 };
 
+export type PaginationType = {
+  currentPage: number;
+  itemsPerPage: number;
+  totalPages: number;
+  totalItems: number;
+};
+
 export type UpdateDeckRequestType = {
   id: string;
   body: FormData;
