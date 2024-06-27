@@ -1,0 +1,13 @@
+.titleContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.settingContainer {
+  display: flex;
+  gap: var(--line-height-m);
+  align-items: end;
+  justify-content: space-between;
+
+  margin-bottom: var(--line-height-l);
+}
