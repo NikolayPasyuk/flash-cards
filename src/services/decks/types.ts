@@ -24,6 +24,8 @@ export type PaginationType = {
   totalItems: number;
 };
 
+export type AddDeckRequestType = FormData;
+
 export type UpdateDeckRequestType = {
   id: string;
   body: FormData;
