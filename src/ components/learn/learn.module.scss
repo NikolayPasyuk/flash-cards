@@ -1,0 +1,30 @@
+.learnCard {
+  margin-top: var(--line-height-l);
+  padding: 2rem 2.25rem 3rem;
+
+  .title {
+    text-align: center;
+  }
+
+  .question {
+    margin: 2.75rem 0 0;
+  }
+
+  .answer {
+    margin: 2.25rem 0 0;
+  }
+
+  .rateText {
+    margin: 0.75rem 0 0;
+  }
+
+  .btn {
+    margin: 1.75rem 0 0;
+    text-align: center;
+  }
+}
+
+.questionText,
+.answerText {
+  word-wrap: break-word;
+}
