@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import { Email } from "../../../assets/icons/email";
 import { Button } from "../../ui/button";
 import { Card } from "../../ui/card";
@@ -21,7 +23,7 @@ export const CheckEmail = ({ email }: Props) => {
         {`We’ve sent an Email with instructions to`}
         <Typography variant="body1">{email}</Typography>
       </Typography>
-      <Button fullWidth type={"submit"}>
+      <Button as={Link} to={"/login"} className={s.signInLink}>
         Back to Sign in
       </Button>
     </Card>
