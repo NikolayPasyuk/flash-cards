@@ -1,9 +1,11 @@
 import { Action, configureStore, ThunkAction } from "@reduxjs/toolkit";
 
 import { baseApi } from "../services/base-api.ts";
+import { decksSlice } from "../services/decks/deck-query-params.slice.ts";
 
 export const store = configureStore({
   reducer: {
+    [decksSlice.name]: decksSlice.reducer,
     [baseApi.reducerPath]: baseApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
