@@ -1,5 +1,11 @@
 import { Nullable } from "../../types/common.types.ts";
 
+export type LoginArgs = {
+  email: string;
+  password: string;
+  rememberMe?: boolean;
+};
+
 export type MeResponse = {
   email: string;
   name: string;
