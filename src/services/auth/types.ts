@@ -15,3 +15,12 @@ export type UpdateMeArgs = {
   name?: string;
   avatar?: Blob;
 };
+
+export type SignUpArgs = {
+  html?: string;
+  name?: string;
+  password: string;
+  email: string;
+  subject?: string;
+  sendConfirmationEmail?: boolean;
+};
