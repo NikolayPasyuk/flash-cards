@@ -1,14 +1,11 @@
-import { Button } from "@/ components/ui/button";
+import { RouterProvider } from "react-router-dom";
 
-const linkHref = "https://google.com";
+import { router } from "./pages/router.tsx";
 
 export function App() {
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-      <Button>Primary Button</Button>
-      <Button as={"a"} href={linkHref}>
-        Primary Button
-      </Button>
-    </div>
+    <>
+      <RouterProvider router={router} />
+    </>
   );
 }
