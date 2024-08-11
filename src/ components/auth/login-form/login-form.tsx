@@ -1,5 +1,6 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 import { z } from "zod";
 
 import { Button } from "../../ui/button";
@@ -60,7 +61,12 @@ export const LoginForm = (props: Props) => {
             position={"left"}
           />
 
-          <Typography variant="body2" className={s.forgotPassword}>
+          <Typography
+            variant="body2"
+            as={Link}
+            to="/recover-password"
+            className={s.forgotPassword}
+          >
             Forgot password?
           </Typography>
 
@@ -71,7 +77,12 @@ export const LoginForm = (props: Props) => {
         <Typography variant="body2" className={s.noAccount}>
           Don't have an account?
         </Typography>
-        <Typography variant="link1" className={s.signUpLink}>
+        <Typography
+          variant="link1"
+          as={Link}
+          to="/sign-up"
+          className={s.signUpLink}
+        >
           Sign Up
         </Typography>
       </Card>
