@@ -24,3 +24,13 @@ export type SignUpArgs = {
   subject?: string;
   sendConfirmationEmail?: boolean;
 };
+
+export type SignUpResponse = {
+  avatar: string;
+  id: string;
+  email: string;
+  isEmailVerified: boolean;
+  name: string;
+  created: string;
+  updated: string;
+};
