@@ -5,10 +5,12 @@ import { useMeQuery } from "../services/auth/auth-endpoints.ts";
 
 import { CheckEmailPage } from "./check-email.page/check-email.page.tsx";
 import Error404Page from "./error404.page/error404.page.tsx";
+import { LoginPage } from "./login.page";
 import { SignUpPage } from "./sign-up.page";
 
 export const PATH = {
   HOME: "/",
+  LOGIN: "login",
   REGISTER: "sign-up",
   CHECK_EMAIL: "check-email/:email?",
 } as const;
@@ -21,6 +23,10 @@ export const router = createBrowserRouter([
     children: [
       {
         element: <ProtectedRoutes />,
+      },
+      {
+        path: PATH.LOGIN,
+        element: <LoginPage />,
       },
       {
         path: PATH.REGISTER,
