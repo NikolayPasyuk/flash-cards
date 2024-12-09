@@ -1,7 +1,13 @@
 import { Nullable } from "../../types/common.types.ts";
 import { baseApi } from "../base-api.ts";
 
-import { MeResponse, SignUpArgs, SignUpResponse } from "./types.ts";
+import {
+  MeResponse,
+  SignUpArgs,
+  SignUpResponse,
+  LoginArgs,
+  LoginResponse,
+} from "./types.ts";
 import { setClearFilter } from "@/services/decks/deck-query-params.slice.ts";
 
 export const authEndpoints = baseApi.injectEndpoints({
@@ -13,6 +19,14 @@ export const authEndpoints = baseApi.injectEndpoints({
         extraOptions: { maxRetries: false },
       }),
       providesTags: ["Me"],
+    }),
+    login: builder.mutation<LoginResponse, LoginArgs>({
+      query: (args) => ({
+        url: `auth/login`,
+        method: "POST",
+        body: args,
+      }),
+      invalidatesTags: ["Me"],
     }),
     logout: builder.mutation<unknown, void>({
       query: () => ({
@@ -45,5 +59,9 @@ export const authEndpoints = baseApi.injectEndpoints({
   }),
 });
 
-export const { useMeQuery, useLogoutMutation, useSignUpMutation } =
-  authEndpoints;
+export const {
+  useMeQuery,
+  useLoginMutation,
+  useLogoutMutation,
+  useSignUpMutation,
+} = authEndpoints;
