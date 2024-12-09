@@ -6,6 +6,10 @@ export type LoginArgs = {
   rememberMe?: boolean;
 };
 
+export type LoginResponse = {
+  accessToken: string;
+};
+
 export type MeResponse = {
   email: string;
   name: string;
