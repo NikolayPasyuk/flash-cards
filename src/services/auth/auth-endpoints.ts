@@ -2,6 +2,7 @@ import { Nullable } from "../../types/common.types.ts";
 import { baseApi } from "../base-api.ts";
 
 import {
+  ForgotPasswordArgs,
   MeResponse,
   SignUpArgs,
   SignUpResponse,
@@ -55,6 +56,15 @@ export const authEndpoints = baseApi.injectEndpoints({
         method: "POST",
         body: args,
       }),
+    }),
+    forgotPassword: builder.mutation<unknown, ForgotPasswordArgs>({
+      query: (args) => {
+        return {
+          url: `auth/recover-password`,
+          method: "POST",
+          body: args,
+        };
+      },
     }),
   }),
 });
