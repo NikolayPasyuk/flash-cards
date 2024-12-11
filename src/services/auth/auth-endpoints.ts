@@ -74,4 +74,5 @@ export const {
   useLoginMutation,
   useLogoutMutation,
   useSignUpMutation,
+  useForgotPasswordMutation,
 } = authEndpoints;
