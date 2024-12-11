@@ -44,3 +44,9 @@ export type SignUpResponse = {
   created: string;
   updated: string;
 };
+
+export type ForgotPasswordArgs = {
+  html?: string;
+  email: string;
+  subject?: string;
+};
