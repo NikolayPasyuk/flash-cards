@@ -6,6 +6,7 @@ import { useMeQuery } from "../services/auth/auth-endpoints.ts";
 import { CheckEmailPage } from "./check-email.page/check-email.page.tsx";
 import Error404Page from "./error404.page/error404.page.tsx";
 import { LoginPage } from "./login.page";
+import { NewPasswordPage } from "./new-password.page/new-password.page.tsx";
 import { PasswordRecoveryPage } from "./password-recovery.page";
 import { SignUpPage } from "./sign-up.page";
 
@@ -15,6 +16,7 @@ export const PATH = {
   REGISTER: "sign-up",
   RECOVERY_PASSWORD: "recover-password",
   CHECK_EMAIL: "check-email/:email?",
+  CREATE_NEW_PASSWORD: "new-password/:token",
 } as const;
 
 export const router = createBrowserRouter([
@@ -41,6 +43,10 @@ export const router = createBrowserRouter([
       {
         path: PATH.CHECK_EMAIL,
         element: <CheckEmailPage />,
+      },
+      {
+        path: PATH.CREATE_NEW_PASSWORD,
+        element: <NewPasswordPage />,
       },
     ],
   },
