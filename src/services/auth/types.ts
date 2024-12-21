@@ -50,3 +50,8 @@ export type ForgotPasswordArgs = {
   email: string;
   subject?: string;
 };
+
+export type NewPasswordArgs = {
+  token: string;
+  password: string;
+};
