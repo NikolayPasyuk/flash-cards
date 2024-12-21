@@ -4,12 +4,13 @@ import { baseApi } from "../base-api.ts";
 import {
   ForgotPasswordArgs,
   MeResponse,
+  NewPasswordArgs,
   SignUpArgs,
   SignUpResponse,
   LoginArgs,
   LoginResponse,
 } from "./types.ts";
-import { setClearFilter } from "@/services/decks/deck-query-params.slice.ts";
+import { setClearFilter } from "../decks/deck-query-params.slice.ts";
 
 export const authEndpoints = baseApi.injectEndpoints({
   endpoints: (builder) => ({
@@ -66,6 +67,13 @@ export const authEndpoints = baseApi.injectEndpoints({
         };
       },
     }),
+    newPassword: builder.mutation<unknown, NewPasswordArgs>({
+      query: (args) => ({
+        url: `auth/reset-password/${args.token}`,
+        method: "POST",
+        body: { password: args.password },
+      }),
+    }),
   }),
 });
 
@@ -75,4 +83,5 @@ export const {
   useLogoutMutation,
   useSignUpMutation,
   useForgotPasswordMutation,
+  useNewPasswordMutation,
 } = authEndpoints;
