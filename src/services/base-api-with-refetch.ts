@@ -6,7 +6,7 @@ import {
 } from "@reduxjs/toolkit/query";
 import { Mutex } from "async-mutex";
 
-const baseUrl = import.meta.env.VITE_BASE_API_URL;
+const baseUrl = "https://api.flashcards.andrii.es/v1";
 
 const mutex = new Mutex();
 
