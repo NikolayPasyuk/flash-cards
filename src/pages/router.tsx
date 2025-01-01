@@ -8,10 +8,12 @@ import Error404Page from "./error404.page/error404.page.tsx";
 import { LoginPage } from "./login.page";
 import { NewPasswordPage } from "./new-password.page/new-password.page.tsx";
 import { PasswordRecoveryPage } from "./password-recovery.page";
+import { ProfilePage } from "./profile.page";
 import { SignUpPage } from "./sign-up.page";
 
 export const PATH = {
   HOME: "/",
+  PROFILE: "profile",
   LOGIN: "login",
   REGISTER: "sign-up",
   RECOVERY_PASSWORD: "recover-password",
@@ -27,6 +29,12 @@ export const router = createBrowserRouter([
     children: [
       {
         element: <ProtectedRoutes />,
+        children: [
+          {
+            path: PATH.PROFILE,
+            element: <ProfilePage />,
+          },
+        ],
       },
       {
         path: PATH.LOGIN,
