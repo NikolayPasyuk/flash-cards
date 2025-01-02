@@ -30,3 +30,5 @@ export type UpdateDeckRequestType = {
   id: string;
   body: FormData;
 };
+
+export type DeleteDeckResponseType = Omit<Deck, "author">;
