@@ -32,3 +32,5 @@ export type UpdateDeckRequestType = {
 };
 
 export type DeleteDeckResponseType = Omit<Deck, "author">;
+
+export type DeleteDeckRequestType = { id: string };
