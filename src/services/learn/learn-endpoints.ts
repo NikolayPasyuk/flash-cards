@@ -1,7 +1,7 @@
 import { baseApi } from "../base-api.ts";
 import { Deck } from "../decks/types.ts";
 
-import { LearnDeckResponse } from "./types.ts";
+import { LearnDeckResponse, SaveGradeArgs } from "./types.ts";
 
 const learnEndpoints = baseApi.injectEndpoints({
   endpoints: (builder) => ({
@@ -12,7 +12,15 @@ const learnEndpoints = baseApi.injectEndpoints({
       }),
       providesTags: ["Learn"],
     }),
+    saveGrade: builder.mutation<LearnDeckResponse, SaveGradeArgs>({
+      query: ({ deckId, ...body }) => ({
+        url: `decks/${deckId}/learn`,
+        method: "POST",
+        body,
+      }),
+      invalidatesTags: ["Learn"],
+    }),
   }),
 });
 
-export const { useLearnDeckQuery } = learnEndpoints;
+export const { useLearnDeckQuery, useSaveGradeMutation } = learnEndpoints;
