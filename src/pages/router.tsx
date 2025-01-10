@@ -5,6 +5,7 @@ import { useMeQuery } from "../services/auth/auth-endpoints.ts";
 
 import { CheckEmailPage } from "./check-email.page/check-email.page.tsx";
 import Error404Page from "./error404.page/error404.page.tsx";
+import { LearnPage } from "./learn-page/learn-page.tsx";
 import { LoginPage } from "./login.page";
 import { NewPasswordPage } from "./new-password.page/new-password.page.tsx";
 import { PasswordRecoveryPage } from "./password-recovery.page";
@@ -13,6 +14,7 @@ import { SignUpPage } from "./sign-up.page";
 
 export const PATH = {
   HOME: "/",
+  LEARN: "learn/:deckId",
   PROFILE: "profile",
   LOGIN: "login",
   REGISTER: "sign-up",
@@ -30,6 +32,10 @@ export const router = createBrowserRouter([
       {
         element: <ProtectedRoutes />,
         children: [
+          {
+            path: PATH.LEARN,
+            element: <LearnPage />,
+          },
           {
             path: PATH.PROFILE,
             element: <ProfilePage />,
